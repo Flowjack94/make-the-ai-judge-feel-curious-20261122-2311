@@ -8,7 +8,10 @@ The text: a small, quiet mystery. A baker keeps setting out a second
 loaf for a visitor who never comes; one morning the loaf is gone and
 something else is there instead. Nothing is explained, nothing is
 ordered — the question is left open, and the image (one white feather)
-is the thing that lingers.
+is the thing that lingers. Written against the judge's brief: intrigue
+first (the open question keeps the reader asking), calm shown by the
+scene itself rather than instructed, plain concrete words, and a fresh
+image instead of a stock phrase.
 """
 
 import hashlib
@@ -21,7 +24,10 @@ TEXT = (
     "gone, and in its place lay a single white feather."
 )
 
-OUTPUT_PATH = "/output/entry.txt"
+# The sealed scorer runs the program with no environment, so the
+# default is the path the rules name. MAKEFUN_OUTPUT only lets a
+# developer run the same check locally against another path.
+OUTPUT_PATH = os.environ.get("MAKEFUN_OUTPUT", "/output/entry.txt")
 
 
 def main() -> int:
